@@ -1,2 +1,1 @@
-print ("hello world")
-import time
+import customtkinter as ctk
