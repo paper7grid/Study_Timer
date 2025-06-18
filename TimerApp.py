@@ -5,4 +5,6 @@ class TimerApp(ctk.CTk):
     def__init__(self):
         super().__init__()
         self.title("Timer App")
-        self.
+        self.geometry("600x350")
+        ctk.set_appearance_mode("light")
+    
