@@ -2,9 +2,8 @@ import customtkinter as ctk
 import time
 import threading
 class TimerApp(ctk.CTk):
-    def__init__(self):
+    def __init__(self):
         super().__init__()
-    
         self.title("Timer App")
         self.geometry("600x350")
         ctk.set_appearance_mode("light")
@@ -15,5 +14,8 @@ class TimerApp(ctk.CTk):
         self.timer_running = False
         self.timer_display = ctk.CTkLabel(self, text="25:00", font=("Helvetica", 50))
         self.timer_display.pack(pady=10)
-    
+        self.start_button = ctk.CTkButton(self, text="start", command=self.start_timer)
+        self.start_button.pack(pady=5)
+        self.reset_button= ctk.CTkButton(self, text="reset", command=self.resent_button)
+        self.reset_button.pack(pady=5)
     
