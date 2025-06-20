@@ -26,4 +26,18 @@ class TimerApp(ctk.CTk):
               justify="center"
         )
         self.qoute_label.pack(pady=20)
-    
+    def start_timer(self):
+        if not self.timer_running:
+            self.timer_running = True
+            threading.Thread(target=self.countdown).start()
+    def countdown(self):
+        while self.time_left > 0 and self.timer_running:
+            mins, secs = divmod(self.time_left, 60)
+            time_str = f"{mins:02d}:{secs:02d}"
+            self.timer_display.configure(text=time_str)
+            time.sleep(1)
+            self.time_left -= 1
+        if self.time_left == 0:
+            self.timer_display.configure(text="00:00")
+            self.timer_running = False
+            
