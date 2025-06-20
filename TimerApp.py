@@ -8,7 +8,7 @@ class TimerApp(ctk.CTk):
         self.geometry("600x350")
         ctk.set_appearance_mode("light")
         ctk.set_default_color_theme("blue")
-        self.time_label = ctk.CTkLabel(self, text="🌸 Pomodoro Timer", font=("Helvetica", 24, bold))
+        self.time_label = ctk.CTkLabel(self, text="🌸 Pomodoro Timer", font=("Helvetica", 24,))
         self.time_label.pack(pady=20)
         self.time_left = 25 * 60  # 25 minutes in seconds
         self.timer_running = False
@@ -46,7 +46,7 @@ class TimerApp(ctk.CTk):
         self.timer_display.configure(text="25:00")
 
 if __name__ == "__main__":
-    app = TimerApp
+    app = TimerApp()
     app.mainloop()
 
             
