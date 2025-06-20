@@ -38,6 +38,15 @@ class TimerApp(ctk.CTk):
             time.sleep(1)
             self.time_left -= 1
         if self.time_left == 0:
-            self.timer_display.configure(text="00:00")
+            self.timer_display.configure(text="Done!")
             self.timer_running = False
+    def resent_button(self):
+        self.timer_running = False
+        self.time_left = 25 * 60
+        self.timer_display.configure(text="25:00")
+
+if __name__ == "__main__":
+    app = TimerApp
+    app.mainloop()
+
             
