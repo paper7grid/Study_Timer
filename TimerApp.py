@@ -20,7 +20,7 @@ class TimerApp(ctk.CTk):
         self.reset_button.pack(pady=5)
         self.qoute_label = ctk.CTkLabel(
             self,
-              text=""Stay focused and keep going!"", 
+              text="Stay focused and keep going!", 
               font=("Helvetica", 14), 
               wraplength=500,
               justify="center"
