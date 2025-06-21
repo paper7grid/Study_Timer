@@ -26,6 +26,8 @@ class TimerApp(ctk.CTk):
               justify="center"
         )
         self.qoute_label.pack(pady=20)
+        self.break_button = ctk.CTkButton(self, text="Take a Break", command=self.start_break)
+        self.break_button.pack(pady=5)
     def start_timer(self):
         if not self.timer_running:
             self.timer_running = True
