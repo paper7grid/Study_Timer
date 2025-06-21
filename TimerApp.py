@@ -40,12 +40,22 @@ class TimerApp(ctk.CTk):
             time.sleep(1)
             self.time_left -= 1
         if self.time_left == 0:
-            self.timer_display.configure(text="Done!")
-            self.timer_running = False
+            if hasattr(self, 'is_break') and self.is_break:
+                self.timer_display.configure(text="Break Over! Let's get back to work!")
+                self.is_break = False
+            else: 
+                self.timer_display.configure(text="Done!")
+
     def resent_button(self):
         self.timer_running = False
         self.time_left = 25 * 60
         self.timer_display.configure(text="25:00")
+    def start_break(self):
+        if not self.timer_running:
+            self.time_left = 10 * 60
+            self.timer_running = True
+            threading.Thread(target=self.break_countdown).start()
+    
 
 if __name__ == "__main__":
     app = TimerApp()
