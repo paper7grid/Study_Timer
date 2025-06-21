@@ -56,7 +56,7 @@ class TimerApp(ctk.CTk):
             self.timer_running = True
             self.is_break = True
             self.timer_display.configure(text="10:00")
-            threading.Thread(target=self.self.countdown).start()
+            threading.Thread(target=self.countdown).start()
     
 
 if __name__ == "__main__":
