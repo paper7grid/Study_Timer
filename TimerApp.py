@@ -28,7 +28,7 @@ class TimerApp(ctk.CTk):
         self.qoute_label.pack(pady=20)
         self.break_button = ctk.CTkButton(self, text="Take a Break", command=self.start_break)
         self.break_button.pack(pady=5)
-        
+
     def start_timer(self):
         if not self.timer_running:
             self.timer_running = True
@@ -63,5 +63,4 @@ class TimerApp(ctk.CTk):
 if __name__ == "__main__":
     app = TimerApp()
     app.mainloop()
-
-            
+# This code creates a simple Pomodoro timer application using customtkinter.
