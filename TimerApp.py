@@ -64,3 +64,5 @@ if __name__ == "__main__":
     app = TimerApp()
     app.mainloop()
 # This code creates a simple Pomodoro timer application using customtkinter.
+# It includes a timer that counts down from 25 minutes, a reset button, and a break feature.
+# The timer displays the remaining time in a "MM:SS" format and updates every second.
