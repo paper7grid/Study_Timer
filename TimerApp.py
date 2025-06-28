@@ -1,6 +1,7 @@
 import customtkinter as ctk
 import time
 import threading
+from PIL import Image
 class TimerApp(ctk.CTk):
     def __init__(self):
         super().__init__()
@@ -28,6 +29,10 @@ class TimerApp(ctk.CTk):
         self.qoute_label.pack(pady=20)
         self.break_button = ctk.CTkButton(self, text="Take a Break", command=self.start_break)
         self.break_button.pack(pady=5)
+        bg_image_path = "background_Tim.jpg" 
+        image = Image.open(bg_image_path)
+        self.bg_image = ctk.CTkImage(image, size=(600, 350))
+        s
 
     def start_timer(self):
         if not self.timer_running:
