@@ -32,7 +32,10 @@ class TimerApp(ctk.CTk):
         bg_image_path = "background_Tim.jpg" 
         image = Image.open(bg_image_path)
         self.bg_image = ctk.CTkImage(image, size=(600, 350))
-        s
+        self.bg_label = ctk.CTkLabel(self, image=self.bg_image)
+       
+
+
 
     def start_timer(self):
         if not self.timer_running:
