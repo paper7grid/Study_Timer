@@ -33,6 +33,7 @@ class TimerApp(ctk.CTk):
         image = Image.open(bg_image_path)
         self.bg_image = ctk.CTkImage(image, size=(600, 350))
         self.bg_label = ctk.CTkLabel(self, image=self.bg_image)
+        self.bg_label.place(relwidth=1, relheight=1)
        
 
 
