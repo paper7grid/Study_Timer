@@ -9,6 +9,11 @@ class TimerApp(ctk.CTk):
         self.geometry("600x350")
         ctk.set_appearance_mode("light")
         ctk.set_default_color_theme("blue")
+        bg_image_path = "background_Tim.jpg" 
+        image = Image.open(bg_image_path)
+        self.bg_image = ctk.CTkImage(image, size=(600, 350))
+        self.bg_label = ctk.CTkLabel(self, image=self.bg_image)
+        self.bg_label.place(relwidth=1, relheight=1)
         self.time_label = ctk.CTkLabel(self, text="🌸 Pomodoro Timer", font=("Helvetica", 24,))
         self.time_label.pack(pady=20)
         self.time_left = 25 * 60  # 25 minutes in seconds
@@ -29,11 +34,8 @@ class TimerApp(ctk.CTk):
         self.qoute_label.pack(pady=20)
         self.break_button = ctk.CTkButton(self, text="Take a Break", command=self.start_break)
         self.break_button.pack(pady=5)
-        bg_image_path = "background_Tim.jpg" 
-        image = Image.open(bg_image_path)
-        self.bg_image = ctk.CTkImage(image, size=(600, 350))
-        self.bg_label = ctk.CTkLabel(self, image=self.bg_image)
-        self.bg_label.place(relwidth=1, relheight=1)
+       
+
        
 
 
