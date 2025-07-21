@@ -34,7 +34,7 @@ class TimerApp(ctk.CTk):
         self.qoute_label.pack(pady=20)
         self.break_button = ctk.CTkButton(self, text="Take a Break", command=self.start_break)
         self.break_button.pack(pady=5)
-       
+
 
        
 
