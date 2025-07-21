@@ -34,6 +34,9 @@ class TimerApp(ctk.CTk):
         self.qoute_label.pack(pady=20)
         self.break_button = ctk.CTkButton(self, text="Take a Break", command=self.start_break)
         self.break_button.pack(pady=5)
+        self.sessions_completed = 0
+        self.session_count_label = ctk.CTkLabel(self, text="Sessions Completed: 0", font=("Helvetica", 14))
+        self.session_count_label.pack(pady=5)
 
 
        
