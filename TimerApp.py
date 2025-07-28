@@ -60,6 +60,8 @@ class TimerApp(ctk.CTk):
                 self.is_break = False
             else: 
                 self.timer_display.configure(text="Done!")
+                self.sessions_completed += 1
+                self.session_count_label.configure(text=f"Sessions Completed: {self.sessions_completed}")
 
     def resent_button(self):
         self.timer_running = False
