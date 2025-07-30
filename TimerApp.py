@@ -14,7 +14,7 @@ class TimerApp(ctk.CTk):
         self.bg_image = ctk.CTkImage(image, size=(601, 350))
         self.bg_label = ctk.CTkLabel(self, image=self.bg_image, text="")
         self.bg_label.place(relwidth=1, relheight=1)
-        self.time_label = ctk.CTkLabel(self, text="🌸 Pomodoro Timer", font=("Helvetica", 24,))
+        self.time_label = ctk.CTkLabel(self, text="🌸 Pomodoro Timer", font=("Century Gothic", 24,))
         self.time_label.pack(pady=20)
         self.time_left = 25 * 60  # 25 minutes in seconds
         self.timer_running = False
