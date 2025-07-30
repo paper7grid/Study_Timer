@@ -11,7 +11,7 @@ class TimerApp(ctk.CTk):
         ctk.set_default_color_theme("blue")
         bg_image_path = "background_Tim.jpg" 
         image = Image.open(bg_image_path)
-        self.bg_image = ctk.CTkImage(image, size=(600, 350))
+        self.bg_image = ctk.CTkImage(image, size=(601, 350))
         self.bg_label = ctk.CTkLabel(self, image=self.bg_image, text="")
         self.bg_label.place(relwidth=1, relheight=1)
         self.time_label = ctk.CTkLabel(self, text="🌸 Pomodoro Timer", font=("Helvetica", 24,))
