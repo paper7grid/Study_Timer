@@ -2,6 +2,15 @@ import customtkinter as ctk
 import time
 import threading
 from PIL import Image
+import sys
+import os
+def resource_path(path):
+    try:
+        base_path = sys._MEIPASS
+    except:
+        base_path = os.path.abspath(".")
+    return os.path.join(base_path, path)
+
 class TimerApp(ctk.CTk):
     def __init__(self):
         super().__init__()
@@ -9,7 +18,7 @@ class TimerApp(ctk.CTk):
         self.geometry("600x350")
         ctk.set_appearance_mode("light")
         ctk.set_default_color_theme("blue")
-        bg_image_path = "background_Tim.jpg" 
+        bg_image_path = resource_path('background_Tim.jpg') 
         image = Image.open(bg_image_path)
         self.bg_image = ctk.CTkImage(image, size=(601, 350))
         self.bg_label = ctk.CTkLabel(self, image=self.bg_image, text="")

@@ -5,7 +5,7 @@ a = Analysis(
     ['TimerApp.py'],
     pathex=[],
     binaries=[],
-    datas=[('background_Tim.jpg', '.')],
+    datas=[],
     hiddenimports=[],
     hookspath=[],
     hooksconfig={},
@@ -29,16 +29,10 @@ exe = EXE(
     upx=True,
     upx_exclude=[],
     runtime_tmpdir=None,
-    console=False,
+    console=True,
     disable_windowed_traceback=False,
     argv_emulation=False,
     target_arch=None,
     codesign_identity=None,
     entitlements_file=None,
-)
-app = BUNDLE(
-    exe,
-    name='TimerApp.app',
-    icon=None,
-    bundle_identifier=None,
 )
