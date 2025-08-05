@@ -5,7 +5,7 @@ a = Analysis(
     ['TimerApp.py'],
     pathex=[],
     binaries=[],
-    datas=[],
+    datas=[('background_Tim.jpg', '.')],
     hiddenimports=[],
     hookspath=[],
     hooksconfig={},
