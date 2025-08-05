@@ -1,0 +1,3 @@
+([('TimerApp',
+   '/Users/sadiamuddassir/Desktop/Athena_Proj/Study_Timer_App/Study_Timer/dist/TimerApp',
+   'EXECUTABLE')],)
